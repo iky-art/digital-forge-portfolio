@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risky Pratama — Iky — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio Risky Pratama (Iky), Full-Stack dan Creative Developer yang membangun software, interface, developer tools, dan eksperimen digital." />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Risky Pratama — Iky — Full-Stack Developer" />
+  <meta property="og:description" content="Portfolio Risky Pratama (Iky), Full-Stack dan Creative Developer yang membangun software, interface, developer tools, dan eksperimen digital." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- Interactive Splash / Intro -->
+  <div id="intro" class="intro" role="dialog" aria-label="Intro Digital Forge">
+    <canvas id="intro-canvas"></canvas>
+    <div class="intro-content">
+      <div class="intro-label">01 — DIGITAL FORGE</div>
+      <h1 class="intro-name">IKY</h1>
+      <p class="intro-fullname">RISKY PRATAMA</p>
+      <p class="intro-role">CREATIVE DEVELOPER</p>
+      <p class="intro-instruction" id="introInstruction">Geser atau sentuh untuk masuk</p>
+      <div class="intro-status" id="introStatus" aria-live="polite"></div>
+      <button class="intro-skip" id="skipIntro" type="button">Lewati Intro</button>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" class="app" hidden>
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <a href="#hero" class="nav-logo" data-cursor="interactive">IKY</a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#about" data-cursor="interactive">Tentang</a>
+        <a href="#skills" data-cursor="interactive">Keahlian</a>
+        <a href="#work" data-cursor="interactive">Proyek</a>
+        <a href="#experience" data-cursor="interactive">Pengalaman</a>
+        <a href="#experiments" data-cursor="interactive">Eksperimen</a>
+        <a href="#contact" data-cursor="interactive">Kontak</a>
+      </nav>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" data-cursor="interactive">
+          <span class="theme-icon"></span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Buka menu" aria-expanded="false" data-cursor="interactive">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="mobile-nav" aria-label="Menu mobile">
+        <a href="#about" data-cursor="interactive">Tentang</a>
+        <a href="#skills" data-cursor="interactive">Keahlian</a>
+        <a href="#work" data-cursor="interactive">Proyek</a>
+        <a href="#experience" data-cursor="interactive">Pengalaman</a>
+        <a href="#experiments" data-cursor="interactive">Eksperimen</a>
+        <a href="#cv" data-cursor="interactive">CV</a>
+        <a href="#contact" data-cursor="interactive">Kontak</a>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="hero-3d">
+          <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+          <div class="hero-label">2026 / DIGITAL FORGE</div>
+          <h1 class="hero-title">
+            <span class="hero-greeting">Halo, saya Iky.</span>
+            <span class="hero-name">Risky Pratama</span>
+          </h1>
+          <p class="hero-role">Full-Stack Developer &amp; Creative Developer</p>
+          <p class="hero-desc">Saya membangun aplikasi web, developer tools, dan pengalaman digital dengan memadukan teknologi, desain, dan eksplorasi.</p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary" data-cursor="interactive">Lihat Proyek</a>
+            <a href="#about" class="btn btn-ghost" data-cursor="interactive">Tentang Saya</a>
+            <a href="#contact" class="btn btn-ghost" data-cursor="interactive">Hubungi Saya</a>
+          </div>
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            Terbuka untuk Proyek
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about section">
+        <div class="section-label">01 — TENTANG</div>
+        <div class="about-grid">
+          <div class="about-statement">
+            <h2>Saya membangun hal-hal<br>di antara engineering<br>dan visual design.</h2>
+          </div>
+          <div class="about-body">
+            <p>Saya adalah developer yang senang membangun berbagai hal di dunia digital — mulai dari aplikasi web, developer tools, CLI, hingga eksperimen interaktif.</p>
+            <p>Saya tertarik pada bagaimana teknologi dan desain dapat bertemu untuk menghasilkan pengalaman digital yang terasa sederhana, cepat, dan memiliki karakter.</p>
+            <p>Saya suka membongkar sesuatu untuk memahami cara kerjanya, lalu mencoba membuat versi saya sendiri.</p>
+          </div>
+        </div>
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-label">Lokasi</span>
+            <span class="meta-value">Indonesia</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Fokus</span>
+            <span class="meta-value">Full-Stack · Creative Dev</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Minat Saat Ini</span>
+            <span class="meta-value">WebGL · AI · Developer Tools</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Stack</span>
+            <span class="meta-value">JS · TS · React · Node · Three.js</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="skills section">
+        <div class="section-label">02 — KEAHLIAN</div>
+        <h2 class="section-title">Ekosistem Teknis</h2>
+        <p class="section-desc">Bukan daftar skill biasa — ini peta alat yang saya gunakan untuk membangun.</p>
+        <div class="skills-ecosystem" id="skillsEcosystem">
+          <div class="skills-core">
+            <div class="core-label">CORE</div>
+            <div class="core-ring"></div>
+          </div>
+          <div class="skill-category" data-cat="frontend">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML5 / CSS3</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-cat="backend">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>REST API</li>
+              <li>GraphQL</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-cat="database">
+            <h3>Database</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>Prisma</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-cat="tools">
+            <h3>Tools</h3>
+            <ul>
+              <li>Git / GitHub</li>
+              <li>Vite</li>
+              <li>Docker</li>
+              <li>VS Code</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-cat="creative">
+            <h3>Creative Technology</h3>
+            <ul>
+              <li>Three.js</li>
+              <li>WebGL</li>
+              <li>GSAP</li>
+              <li>Canvas API</li>
+              <li>SVG Animation</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-cat="ai">
+            <h3>AI &amp; Eksperimen</h3>
+            <ul>
+              <li>OpenAI API</li>
+              <li>Prompt Engineering</li>
+              <li>LLM Integration</li>
+              <li>AI Tools</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galaxy Projects -->
+      <section id="work" class="work galaxy-section">
+        <div class="galaxy-header section">
+          <div class="section-label">03 — GALAKSI PROYEK</div>
+          <h2 class="section-title">Proyek Pilihan</h2>
+          <p class="section-desc">Setiap planet adalah sebuah proyek. Sentuh atau klik planet untuk membuka detailnya.</p>
+        </div>
+        <div class="galaxy-stage">
+          <canvas id="galaxy-canvas"></canvas>
+          <div class="galaxy-hud" id="galaxyHud" aria-live="polite">
+            <div class="galaxy-hint" id="galaxyHint">Geser untuk menjelajah · Klik planet untuk membuka</div>
+            <div class="galaxy-focus" id="galaxyFocus" hidden>
+              <span class="galaxy-focus-num" id="galaxyFocusNum"></span>
+              <h3 class="galaxy-focus-name" id="galaxyFocusName"></h3>
+              <p class="galaxy-focus-meta" id="galaxyFocusMeta"></p>
+              <button type="button" class="btn btn-primary galaxy-open-btn" id="galaxyOpenBtn" data-cursor="interactive">Buka Proyek</button>
+            </div>
+          </div>
+          <div class="galaxy-legend" id="galaxyLegend" aria-label="Daftar planet proyek">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="experience section">
+        <div class="section-label">04 — PENGALAMAN</div>
+        <h2 class="section-title">Pengalaman</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2023 — Sekarang</div>
+            <div class="timeline-content">
+              <h3>Developer Independen</h3>
+              <p>Membangun produk digital, tools, dan eksperimen secara mandiri. Fokus pada full-stack development, interface design, dan creative technology.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022 — 2025</div>
+            <div class="timeline-content">
+              <h3>Pengembangan Proyek Personal</h3>
+              <p>Serangkaian proyek pribadi yang menjadi laboratorium belajar — dari aplikasi web hingga developer tools dan visualisasi interaktif.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Ongoing</div>
+            <div class="timeline-content">
+              <h3>Eksperimen &amp; Open Source</h3>
+              <p>Eksplorasi continuous: CLI tools, library kecil, integrasi AI, dan eksperimen WebGL yang dibagikan ke komunitas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiments -->
+      <section id="experiments" class="experiments section">
+        <div class="section-label">05 — EKSPERIMEN</div>
+        <h2 class="section-title">Eksperimen &amp; Open Source</h2>
+        <p class="section-desc">Laboratorium tempat ide diuji sebelum menjadi produk.</p>
+        <div class="exp-grid">
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">Developer Tools</div>
+            <h3>CLI Scaffold</h3>
+            <p>Generator proyek cepat dengan template yang bisa dikustomisasi.</p>
+          </div>
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">AI</div>
+            <h3>Prompt Lab</h3>
+            <p>Workspace untuk menguji dan menyimpan prompt engineering experiments.</p>
+          </div>
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">WebGL</div>
+            <h3>Particle Field</h3>
+            <p>Eksperimen partikel interaktif dengan Three.js dan custom shaders.</p>
+          </div>
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">Library</div>
+            <h3>Motion Utils</h3>
+            <p>Kumpulan helper animasi ringan untuk interaksi micro.</p>
+          </div>
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">Web App</div>
+            <h3>Focus Timer</h3>
+            <p>Pomodoro minimal dengan suara ambient dan tracking sesi.</p>
+          </div>
+          <div class="exp-card" data-cursor="interactive">
+            <div class="exp-tag">Open Source</div>
+            <h3>Config Templates</h3>
+            <p>Koleksi konfigurasi siap pakai untuk tooling modern.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CV -->
+      <section id="cv" class="cv section">
+        <div class="section-label">06 — CV DIGITAL</div>
+        <div class="cv-card">
+          <div class="cv-header">
+            <h2>Risky Pratama</h2>
+            <p class="cv-aka">IKY</p>
+            <p class="cv-role">Full-Stack Developer · Creative Developer</p>
+          </div>
+          <div class="cv-body">
+            <div class="cv-col">
+              <h4>Fokus</h4>
+              <p>Web Development, Developer Tools, Creative Technology, AI Integration</p>
+            </div>
+            <div class="cv-col">
+              <h4>Stack Utama</h4>
+              <p>JavaScript, TypeScript, React, Node.js, Three.js, PostgreSQL</p>
+            </div>
+            <div class="cv-col">
+              <h4>Kontak</h4>
+              <p>Tersedia untuk kolaborasi dan proyek</p>
+            </div>
+          </div>
+          <a href="assets/Risky-Pratama-CV.pdf" class="btn btn-primary" download data-cursor="interactive">Unduh CV</a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact section">
+        <div class="section-label">07 — KONTAK</div>
+        <h2 class="contact-title">Mari Bangun<br>Sesuatu.</h2>
+        <p class="contact-desc">Jika kamu memiliki ide, proyek, atau sekadar ingin berdiskusi tentang teknologi, silakan hubungi saya.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <a href="mailto:hello@iky.dev" class="contact-link" data-cursor="interactive">
+              <span class="contact-label">Email</span>
+              <span>hello@iky.dev</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-link" data-cursor="interactive">
+              <span class="contact-label">GitHub</span>
+              <span>github.com/iky</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link" data-cursor="interactive">
+              <span class="contact-label">LinkedIn</span>
+              <span>linkedin.com/in/iky</span>
+            </a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-cursor="interactive">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">IKY</span>
+          <span class="footer-name">Risky Pratama</span>
+          <p>Membangun software, interface, dan eksperimen digital.</p>
+        </div>
+        <nav class="footer-links">
+          <a href="#about">Tentang</a>
+          <a href="#work">Proyek</a>
+          <a href="#experiments">Eksperimen</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+        <p class="footer-copy">© 2026 Risky Pratama</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Tutup" data-cursor="interactive">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
